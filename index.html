@@ -1,0 +1,291 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Elana França Estética</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+<style>
+/* Layout: centered column, one asymmetric hero with concentric "ripple" arcs; sections alternate surface tones */
+:root{
+  --bg:#F3F5F1; --surface:#E8EDE7; --fg:#142A2A; --muted:#51655F;
+  --accent:#2F6F66; --accent-fg:#F3F5F1; --gold:#A88A52; --line:#CFD8D1;
+  --display:'Cormorant','Cormorant Garamond',Georgia,serif;
+  --body:'Jost',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F1E1E; --surface:#162828; --fg:#EAF0EB; --muted:#9DB2AB;
+  --accent:#6FB5A8; --accent-fg:#0F1E1E; --gold:#CDB27A; --line:#27403F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1E1E; --surface:#162828; --fg:#EAF0EB; --muted:#9DB2AB;
+  --accent:#6FB5A8; --accent-fg:#0F1E1E; --gold:#CDB27A; --line:#27403F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:300;font-size:17px;line-height:1.65;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+.wrap{max-width:1040px;margin:0 auto}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+h1{font-size:clamp(2.7rem,9vw,5.4rem)}
+h2{font-size:clamp(2rem,5.6vw,3.2rem)}
+h3{font-size:1.7rem}
+em{font-style:italic;color:var(--accent)}
+p{margin:0;max-width:62ch}
+.eyebrow{font-size:.74rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:500}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(10px);
+  margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.brand{font-family:var(--display);font-size:1.35rem;font-weight:600;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--gold);font-style:italic;font-weight:400}
+nav{display:flex;gap:26px}
+nav a{text-decoration:none;font-size:.9rem;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+@media(max-width:700px){nav{display:none}}
+
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--accent);color:var(--accent-fg);text-decoration:none;
+  padding:13px 26px;border-radius:999px;font-weight:500;font-size:.95rem;letter-spacing:.02em;transition:transform .2s,filter .2s;white-space:nowrap}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn.sm{padding:9px 18px;font-size:.85rem}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-block:72px 80px}
+.hero p.lead{font-size:1.18rem;color:var(--muted);margin-top:26px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero h1{margin-top:18px}
+.ripple{width:100%;max-width:380px;justify-self:center;aspect-ratio:5/6;color:var(--accent)}
+.art{width:100%;height:auto;display:block;background:var(--surface);border-radius:4px;margin-bottom:8px}
+.cup{width:100%;max-width:200px;height:auto;margin-top:12px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-block:48px 56px}.ripple{max-width:260px;order:-1;justify-self:start}}
+
+.band{background:var(--surface);margin-inline:calc(-1*max(16px,env(safe-area-inset-left,0px)));padding-inline:max(16px,env(safe-area-inset-left,0px))}
+section{padding-block:80px}
+.head{display:grid;gap:14px;margin-bottom:44px}
+.head p{color:var(--muted)}
+
+.methods{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px}
+.method{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:34px 30px;display:grid;gap:14px;align-content:start;min-width:0}
+.method .tag{font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:500}
+.method p{color:var(--muted)}
+.method ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:8px}
+.method li{padding-left:22px;position:relative;font-size:.97rem}
+.method li::before{content:"";position:absolute;left:0;top:.72em;width:10px;height:1px;background:var(--gold)}
+
+.goals{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:0;border-top:1px solid var(--line)}
+.goal{padding:28px 22px 28px 0;border-bottom:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.goal h3{font-size:1.45rem}
+.goal p{color:var(--muted);font-size:.97rem}
+
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+@media(max-width:800px){.split{grid-template-columns:1fr;gap:36px}}
+.steps{display:grid;gap:0;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:48px 1fr;gap:6px 14px;padding:22px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--display);font-size:2rem;color:var(--gold);grid-row:span 2;line-height:1}
+.steps b{font-weight:500}
+.steps span{color:var(--muted);font-size:.97rem}
+
+.event{display:grid;gap:18px;justify-items:start}
+.event p{color:var(--muted)}
+
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-family:var(--display);font-size:1.4rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:1.6rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--muted)}
+
+.cta-block{text-align:center;display:grid;gap:22px;justify-items:center}
+.cta-block p{color:var(--muted)}
+.where{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:center;color:var(--muted);font-size:.95rem}
+footer{padding-block:34px 44px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;color:var(--muted);font-size:.85rem}
+footer a{text-decoration:none;border-bottom:1px solid var(--line)}
+.note{font-size:.8rem;color:var(--muted);margin-top:26px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}.ripple *{animation:none!important}}
+.ripple circle,.ripple ellipse{animation:breathe 9s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+.ripple ellipse:nth-of-type(2){animation-delay:-3s}.ripple ellipse:nth-of-type(3){animation-delay:-6s}
+@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+</style>
+
+<header>
+  <div class="wrap bar">
+    <a class="brand" href="#inicio">Elana <span>França</span></a>
+    <nav aria-label="Principal">
+      <a href="#metodos">Métodos</a><a href="#sessao">Sua sessão</a><a href="#eventos">Eventos</a><a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn sm cta" href="#contato">Agendar</a>
+  </div>
+</header>
+
+<main class="wrap" id="inicio">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Estética corporal · Recife, PE</span>
+      <h1>O relaxamento que <em>esculpe</em> o corpo.</h1>
+      <p class="lead">Desinchaço, redução de medidas e alívio de dores, com métodos que trabalham de dentro para fora e uma pausa de verdade na sua rotina.</p>
+      <div class="actions">
+        <a class="btn cta" href="#contato">Agendar minha sessão</a>
+        <a class="btn ghost" href="#metodos">Conhecer os métodos</a>
+      </div>
+    </div>
+    <svg class="ripple" viewBox="0 0 400 480" role="img" aria-label="Ilustração de um arco com sol, folhagens e ondas de água">
+      <defs><path id="lf" d="M0 0C14-16 14-42 0-62C-14-42-14-16 0 0Z"/></defs>
+      <path d="M30 470V210a170 170 0 0 1 340 0V470Z" fill="var(--surface)" stroke="var(--line)" stroke-width="1.5"/>
+      <path d="M62 470V214a138 138 0 0 1 276 0V470Z" fill="var(--accent)" opacity=".16"/>
+      <circle cx="200" cy="200" r="52" fill="var(--gold)" opacity=".92"/>
+      <g fill="none" stroke="var(--accent)" stroke-width="1.3">
+        <ellipse cx="200" cy="405" rx="60" ry="10" opacity=".9"/>
+        <ellipse cx="200" cy="405" rx="105" ry="18" opacity=".6"/>
+        <ellipse cx="200" cy="405" rx="150" ry="26" opacity=".35"/>
+        <path d="M92 470C96 400 110 350 150 300" stroke-width="2"/>
+        <path d="M308 470C304 410 292 365 262 330" stroke-width="2"/>
+      </g>
+      <g fill="var(--accent)">
+        <use href="#lf" transform="translate(97 440) rotate(-40)"/>
+        <use href="#lf" transform="translate(100 410) rotate(35)"/>
+        <use href="#lf" transform="translate(110 375) rotate(-35)"/>
+        <use href="#lf" transform="translate(124 345) rotate(40)"/>
+        <use href="#lf" transform="translate(146 305) rotate(10)" opacity=".8"/>
+        <use href="#lf" transform="translate(305 440) rotate(40)"/>
+        <use href="#lf" transform="translate(302 410) rotate(-35)"/>
+        <use href="#lf" transform="translate(294 378) rotate(40)"/>
+        <use href="#lf" transform="translate(280 350) rotate(-35)"/>
+        <use href="#lf" transform="translate(262 325) rotate(-10)" opacity=".8"/>
+      </g>
+    </svg>
+  </div>
+</main>
+
+<div class="band" id="metodos">
+  <section class="wrap">
+    <div class="head">
+      <span class="eyebrow">Métodos</span>
+      <h2>Dois caminhos, <em>um cuidado</em> completo.</h2>
+      <p>Elana é habilitada nos dois métodos e indica o que combina com o seu momento, sem pacote pronto.</p>
+    </div>
+    <div class="methods">
+      <article class="method">
+        <svg class="art" viewBox="0 0 300 110" role="img" aria-label="Ilustração de gotas de água e ondas">
+          <g fill="var(--accent)">
+            <path d="M70 38c10 16 14 24 14 31a14 14 0 0 1-28 0c0-7 4-15 14-31Z" opacity=".55"/>
+            <path d="M150 14c16 26 22 38 22 49a22 22 0 0 1-44 0c0-11 6-23 22-49Z"/>
+            <path d="M232 42c8 13 11 19 11 25a11 11 0 0 1-22 0c0-6 3-12 11-25Z" fill="var(--gold)"/>
+          </g>
+          <g fill="none" stroke="var(--accent)" stroke-width="1.2">
+            <ellipse cx="150" cy="92" rx="46" ry="7" opacity=".8"/>
+            <ellipse cx="150" cy="92" rx="90" ry="11" opacity=".45"/>
+            <ellipse cx="150" cy="92" rx="130" ry="15" opacity=".22"/>
+          </g>
+        </svg>
+        <span class="tag">Corpo por dentro</span>
+        <h3>Esculpe Detox</h3>
+        <p>Técnica que trata de dentro para fora, voltada à redução de peso e de medidas.</p>
+        <ul><li>Redução de medidas</li><li>Desinchaço e sensação de leveza</li><li>Resultado perceptível já nas primeiras sessões</li></ul>
+      </article>
+      <article class="method">
+        <svg class="art" viewBox="0 0 300 110" role="img" aria-label="Ilustração de pedras empilhadas sobre a água">
+          <ellipse cx="150" cy="82" rx="54" ry="14" fill="var(--accent)" opacity=".85"/>
+          <ellipse cx="150" cy="62" rx="39" ry="11" fill="var(--accent)" opacity=".6"/>
+          <ellipse cx="150" cy="45" rx="25" ry="8" fill="var(--gold)"/>
+          <g fill="none" stroke="var(--accent)" stroke-width="1.2">
+            <ellipse cx="150" cy="96" rx="90" ry="9" opacity=".5"/>
+            <ellipse cx="150" cy="96" rx="130" ry="12" opacity=".25"/>
+          </g>
+          <path d="M40 90C42 70 50 56 66 46M66 46c-8-2-14 0-18 6M66 46c-2 8-8 12-14 12" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".7"/>
+          <path d="M260 90C258 70 250 56 234 46M234 46c8-2 14 0 18 6M234 46c2 8 8 12 14 12" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".7"/>
+        </svg>
+        <span class="tag">Corpo em pausa</span>
+        <h3>TopCorpus</h3>
+        <p>Foco na redução das dores e no relaxamento profundo, para soltar o que a rotina acumula.</p>
+        <ul><li>Alívio de tensões e dores</li><li>Relaxamento profundo</li><li>Descanso para corpo e mente</li></ul>
+      </article>
+    </div>
+  </section>
+</div>
+
+<section class="wrap" id="para-voce">
+  <div class="head">
+    <span class="eyebrow">Para você que sente</span>
+    <h2>Quando o corpo pede <em>mais cuidado</em>.</h2>
+  </div>
+  <div class="goals">
+    <div class="goal"><h3>Inchaço</h3><p>Beber mais água nem sempre resolve. Cada corpo pede uma abordagem.</p></div>
+    <div class="goal"><h3>Medidas</h3><p>Redução de medidas com acompanhamento e conversa clara sobre o que esperar.</p></div>
+    <div class="goal"><h3>Dores e tensão</h3><p>Pescoço, costas e ombros que carregam o peso dos seus dias.</p></div>
+    <div class="goal"><h3>Cansaço mental</h3><p>Uma hora sem pressa, sem tela e sem lista de tarefas.</p></div>
+  </div>
+</section>
+
+<div class="band" id="sessao">
+  <section class="wrap split">
+    <div class="head" style="margin:0">
+      <span class="eyebrow">Sua sessão</span>
+      <h2>Do primeiro contato ao <em>pós-atendimento</em>.</h2>
+      <p>Tudo combinado pelo WhatsApp, para você chegar já sabendo o que vai acontecer.</p>
+      <svg class="cup" viewBox="0 0 200 160" role="img" aria-label="Ilustração de uma xícara de chá com vapor">
+        <g fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round">
+          <path d="M80 58c-8-10 8-16 0-28"/><path d="M100 58c-8-10 8-16 0-28"/><path d="M120 58c-8-10 8-16 0-28"/>
+        </g>
+        <path d="M45 75h110v20c0 28-22 48-55 48S45 123 45 95Z" fill="var(--bg)" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M155 85h10a14 14 0 0 1 0 28h-14" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <ellipse cx="100" cy="148" rx="72" ry="8" fill="none" stroke="var(--accent)" stroke-width="2"/>
+        <path d="M45 95h110" stroke="var(--accent)" stroke-width="1.2" opacity=".4"/>
+      </svg>
+    </div>
+    <ol class="steps">
+      <li><b>Conversa inicial</b><span>Você conta o que sente e o que deseja. Elana indica o método mais indicado.</span></li>
+      <li><b>Agendamento</b><span>Horário confirmado pelo WhatsApp, com o endereço em Recife e orientações de preparo.</span></li>
+      <li><b>Atendimento</b><span>Ambiente preparado para você desacelerar, com maca, música e chá de boas-vindas.</span></li>
+      <li><b>Acompanhamento</b><span>Orientações para manter o resultado e definição dos próximos passos.</span></li>
+    </ol>
+  </section>
+</div>
+
+<section class="wrap" id="eventos">
+  <div class="event">
+    <span class="eyebrow">Para empresas e eventos</span>
+    <h2>Quick massage <em>onde você estiver</em>.</h2>
+    <p>Elana também leva o relaxamento até o seu evento ou empresa, com atendimentos rápidos de massagem para equipes, convidados e clientes.</p>
+    <a class="btn ghost cta" href="#contato">Pedir um orçamento</a>
+  </div>
+</section>
+
+<div class="band" id="duvidas">
+  <section class="wrap">
+    <div class="head"><span class="eyebrow">Dúvidas</span><h2>Antes de <em>agendar</em>.</h2></div>
+    <details><summary>Onde é o atendimento?</summary><p>Em Recife, Pernambuco. O endereço completo é enviado no momento da confirmação do horário.</p></details>
+    <details><summary>Qual método é o certo para mim?</summary><p>Depende do seu objetivo. Para redução de medidas, o Esculpe Detox. Para dores e relaxamento, o TopCorpus. Na conversa inicial Elana ajuda você a decidir.</p></details>
+    <details><summary>Quando vejo resultado?</summary><p>Muitas clientes percebem diferença já nas primeiras sessões, mas o resultado varia de pessoa para pessoa e depende da sua rotina e dos cuidados em casa.</p></details>
+    <details><summary>Como faço para agendar?</summary><p>Pelo botão de contato desta página. Você fala direto com a Elana e escolhe o melhor horário da semana.</p></details>
+  </section>
+</div>
+
+<section class="wrap" id="contato">
+  <div class="cta-block">
+    <span class="eyebrow">Agende seu momento</span>
+    <h2>Seu corpo merece <em>uma pausa</em>.</h2>
+    <p>Fale com a Elana, conte o que você sente e escolha o seu horário.</p>
+    <a class="btn cta" id="main-cta" href="#contato">Chamar a Elana</a>
+    <div class="where"><span>Recife, PE</span><span>Atendimento com hora marcada</span><a href="https://www.instagram.com/esteticarecifeelanafranca" rel="noopener">@esteticarecifeelanafranca</a></div>
+    <p class="note">Os resultados variam de pessoa para pessoa. Os métodos não substituem acompanhamento médico.</p>
+  </div>
+</section>
+
+<footer class="wrap">
+  <span>© <span id="yr">2026</span> Elana França Estética</span>
+  <a href="https://www.instagram.com/esteticarecifeelanafranca" rel="noopener">Instagram</a>
+</footer>
+
+<script>
+  // Para ativar o WhatsApp: preencha com DDI+DDD+número, só dígitos. Ex.: "5581999999999"
+  var WHATSAPP = "";
+  var msg = encodeURIComponent("Olá, Elana! Vi seu site e gostaria de agendar uma sessão.");
+  var href = WHATSAPP ? "https://wa.me/" + WHATSAPP + "?text=" + msg : "https://ig.me/m/esteticarecifeelanafranca";
+  document.querySelectorAll("a.cta").forEach(function(a){
+    if (a.getAttribute("href") === "#contato" && !a.closest("header")) { a.setAttribute("href", href); a.setAttribute("rel","noopener"); }
+    if (a.closest("header")) { a.addEventListener("click", function(){}); }
+  });
+  var m = document.getElementById("main-cta"); if (m) { m.setAttribute("href", href); m.setAttribute("rel","noopener"); }
+  document.getElementById("yr").textContent = new Date().getFullYear();
+</script>
+
+</body></html>
